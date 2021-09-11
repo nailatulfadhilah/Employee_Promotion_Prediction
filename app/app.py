@@ -80,9 +80,9 @@ def predict_promotion(data:PromotionPrediction):
     prediction = classifier.predict(data_pred)
     print(prediction[0],'INIIIIIIIIIIIIII')
     if prediction[0] == 1:
-        result = 'YES'
+        result = 'You will be promoted!'
     else:
-        result = 'NO'
+        result = 'You will not be promoted'
     return {
         'prediction': result
     }
