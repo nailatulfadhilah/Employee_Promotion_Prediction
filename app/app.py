@@ -4,7 +4,7 @@ from promotion_prediction import PromotionPrediction
 import pickle
 from mapping import (
     edu_mapping, 
-    genre_mapping, 
+    gender_mapping, 
     mapping_dept_score,
     wilayah_mapping
 )
@@ -24,7 +24,7 @@ def predict_promotion(data:PromotionPrediction):
 
     wilayah = wilayah_mapping.get(data['wilayah'])
     pendidikan = edu_mapping.get(data['pendidikan'])
-    jenis_kelamin = genre_mapping.get(data['jenis_kelamin'])
+    jenis_kelamin = gender_mapping.get(data['jenis_kelamin'])
     jumlah_training = data['jumlah_training']
     umur = data['umur']
     rating_tahun_lalu= data['rating_tahun_lalu']
