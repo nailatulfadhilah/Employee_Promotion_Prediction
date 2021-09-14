@@ -2,10 +2,10 @@ import dash_bootstrap_components as dbc
 import dash_html_components as html
 import dash_core_components as dcc
 from mapping import (
-    edu_mapping, 
-    gender_mapping, 
-    mapping_dept_score,
-    wilayah_mapping
+    edu_keys, 
+    gender_keys, 
+    dept_keys,
+    wilayah_keys
 )
 
 def row1_values():

@@ -10,9 +10,10 @@ with open('mapping/gender_mapping.json') as f:
     gender_mapping = json.load(f)
     gender_keys = [val for key, val in gender_mapping.items()]
 
-# # dept score
-# with open('mapping/mapping_dept_score.json') as f:
-#     mapping_dept_score = json.load(f)
+# dept score
+with open('mapping/mapping_dept_score.json') as f:
+    mapping_dept_score = json.load(f)
+    dept_keys = [key for key, val in gender_mapping.items()]
 
 # wilayah mapping
 with open('mapping/wilayah_mapping.json') as f:
