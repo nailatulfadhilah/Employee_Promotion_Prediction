@@ -19,7 +19,9 @@ def row3_values():
                             id='rating-slider',
                             min=0,
                             max=5,
-                            value=3, 
+                            value=3,
+                            marks={str(rating): str(rating) for rating in range(0,5,1)},
+                            step=1,
                             className="mb-2 ml-2 mt-2 h-100" 
                         )
                     ], style={'textAlign':'center'})
@@ -63,6 +65,8 @@ def row3_values():
                             min=0,
                             max=100,
                             value=70, 
+                            marks={str(score): str(score) for score in range(0,100,20)},
+                            step=1,
                             className="mb-2 ml-2 mt-2 h-100" 
                         )
                     ], style={'textAlign':'center'})

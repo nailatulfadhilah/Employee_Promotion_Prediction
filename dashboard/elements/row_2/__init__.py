@@ -9,7 +9,7 @@ def row2_values():
         dbc.Col([
                 dbc.Card([
                     dbc.CardBody([
-                        html.H6('Departemen'),
+                        html.H6('Departement'),
                         html.H1(id="departemen-dropdown-value",
                                 children="Technology"),
                         dcc.Dropdown(
@@ -48,6 +48,8 @@ def row2_values():
                             min=0,
                             max=40,
                             value=2,
+                            marks={str(period): str(period) for period in range(0,40,10)},
+                            step=1,
                             className="mb-2 ml-2 mt-2 h-100"
                         )
                     ], style={'textAlign': 'center'})
@@ -62,7 +64,9 @@ def row2_values():
                             id='jumlahtraining-slider',
                             min=1,
                             max=10,
-                            value=5, 
+                            value=5,
+                            marks={str(training): str(training) for training in range(1,10,2)},
+                            step=1,
                             className="mb-2 ml-2 mt-2 h-100" 
                         )
                     ], style={'textAlign':'center'})
