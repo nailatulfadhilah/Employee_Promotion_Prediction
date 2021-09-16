@@ -13,7 +13,7 @@ with open('mapping/gender_mapping.json') as f:
 # dept score
 with open('mapping/mapping_dept_score.json') as f:
     mapping_dept_score = json.load(f)
-    dept_keys = [key for key, val in gender_mapping.items()]
+    dept_keys = [key for key, val in mapping_dept_score.items()]
 
 # wilayah mapping
 with open('mapping/wilayah_mapping.json') as f:

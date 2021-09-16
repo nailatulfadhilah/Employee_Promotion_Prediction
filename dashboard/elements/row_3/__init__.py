@@ -8,32 +8,18 @@ from mapping import (
     wilayah_keys
 )
 
-def row1_values():
+def row3_values():
     return dbc.Row([
         dbc.Col([
                 dbc.Card([
                     dbc.CardBody([
-                        html.H6('Gender'),
-                        html.H1(id="gender-dropdown-value", children="Female"), 
-                        dcc.Dropdown(
-                            id='gender-dropdown',
-                            options=[{'label': i, 'value': i} for i in gender_keys],
-                            value='Female', 
-                            className="mb-2 ml-2 mt-2 h-100" 
-                        )
-                    ], style={'textAlign':'center'})
-                ]),
-            ], width=3),
-        dbc.Col([
-                dbc.Card([
-                    dbc.CardBody([
-                        html.H6('Age'),
-                        html.H1(id="age-slider-value", children="25"), 
+                        html.H6('Previous Year Rating'),
+                        html.H1(id="rating-slider-value", children="3"), 
                         dcc.Slider(
-                            id='age-slider',
-                            min=20,
-                            max=60,
-                            value='25', 
+                            id='rating-slider',
+                            min=0,
+                            max=5,
+                            value=3, 
                             className="mb-2 ml-2 mt-2 h-100" 
                         )
                     ], style={'textAlign':'center'})
@@ -42,12 +28,12 @@ def row1_values():
         dbc.Col([
                 dbc.Card([
                     dbc.CardBody([
-                        html.H6('Education'),
-                        html.H1(id="edu-dropdown-value", children="Bachelor's"), 
+                        html.H6('Win an Awards?'),
+                        html.H1(id="penghargaan-dropdown-value", children="NO"), 
                         dcc.Dropdown(
-                            id='edu-dropdown',
-                            options=[{'label': i, 'value': i} for i in edu_keys],
-                            value="Bachelor's", 
+                            id='penghargaan-dropdown',
+                            options=[{'label': i, 'value': i} for i in ['YES','NO']],
+                            value='NO', 
                             className="mb-2 ml-2 mt-2 h-100" 
                         )
                     ], style={'textAlign':'center'})
@@ -56,12 +42,27 @@ def row1_values():
         dbc.Col([
                 dbc.Card([
                     dbc.CardBody([
-                        html.H6('Region/Wilayah'),
-                        html.H1(id="reg-dropdown-value", children="wilayah_1"), 
+                        html.H6('KPI >80%?'),
+                        html.H1(id="kpi-dropdown-value", children="YES"), 
                         dcc.Dropdown(
-                            id='reg-dropdown',
-                            options=[{'label': i, 'value': i} for i in wilayah_keys],
-                            value="wilayah_1", 
+                            id='KPI-dropdown',
+                            options=[{'label': i, 'value': i} for i in ['YES','NO']],
+                            value='YES', 
+                            className="mb-2 ml-2 mt-2 h-100" 
+                        )
+                    ], style={'textAlign':'center'})
+                ]),
+            ], width=3),
+        dbc.Col([
+                dbc.Card([
+                    dbc.CardBody([
+                        html.H6('Average Trainig Score'),
+                        html.H1(id="trainingscore-slider-value", children="70"), 
+                        dcc.Slider(
+                            id='trainingscore-slider',
+                            min=0,
+                            max=100,
+                            value=70, 
                             className="mb-2 ml-2 mt-2 h-100" 
                         )
                     ], style={'textAlign':'center'})

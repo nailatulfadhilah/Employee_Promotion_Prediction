@@ -78,7 +78,7 @@ def predict_promotion(data:PromotionPrediction):
        SalesMarketing, Technology,
        Other, Sourcing]]
     prediction = classifier.predict(data_pred)
-    print(prediction[0],'INIIIIIIIIIIIIII')
+    #print(prediction[0],'INIIIIIIIIIIIIII')
     if prediction[0] == 1:
         result = 'You will be promoted!'
     else:
