@@ -45,7 +45,7 @@ def row3_values():
                         html.H6('KPI >80%?'),
                         html.H1(id="kpi-dropdown-value", children="YES"), 
                         dcc.Dropdown(
-                            id='KPI-dropdown',
+                            id='kpi-dropdown',
                             options=[{'label': i, 'value': i} for i in ['YES','NO']],
                             value='YES', 
                             className="mb-2 ml-2 mt-2 h-100" 
