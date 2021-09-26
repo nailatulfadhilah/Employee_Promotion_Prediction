@@ -1,0 +1,1 @@
+web: (cd prediction && uvicorn app:app --reload) & (cd dashboard && python app.py)
