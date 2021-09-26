@@ -1,1 +1,1 @@
-web: (cd prediction && guvicorn --bind 0.0.0.0:$PORT app:app --reload) & (cd dashboard && python app.py)
+web: (cd prediction && gunicorn --bind 0.0.0.0:$PORT app:app --reload) & (cd dashboard && python app.py)
