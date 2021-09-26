@@ -21,7 +21,7 @@ def row2_values():
                         )
                     ], style={'textAlign': 'center'})
                 ]),
-        ], width=3),
+                ], width=3),
         dbc.Col([
                 dbc.Card([
                     dbc.CardBody([
@@ -37,7 +37,7 @@ def row2_values():
                         )
                     ], style={'textAlign': 'center'})
                 ]),
-            ], width=3),
+                ], width=3),
         dbc.Col([
                 dbc.Card([
                     dbc.CardBody([
@@ -48,28 +48,28 @@ def row2_values():
                             min=0,
                             max=40,
                             value=2,
-                            marks={str(period): str(period) for period in range(0,40,10)},
+                            marks={str(period): str(period) for period in range(0, 40, 10)},
                             step=1,
                             className="mb-2 ml-2 mt-2 h-100"
                         )
                     ], style={'textAlign': 'center'})
                 ]),
-            ], width=3),
+                ], width=3),
         dbc.Col([
                 dbc.Card([
                     dbc.CardBody([
                         html.H6('Number of Trainings'),
-                        html.H1(id="jumlahtraining-slider-value", children="5"), 
+                        html.H1(id="jumlahtraining-slider-value", children="5"),
                         dcc.Slider(
                             id='jumlahtraining-slider',
                             min=1,
                             max=10,
                             value=5,
-                            marks={str(training): str(training) for training in range(1,10,2)},
+                            marks={str(training): str(training) for training in range(1, 10, 2)},
                             step=1,
-                            className="mb-2 ml-2 mt-2 h-100" 
+                            className="mb-2 ml-2 mt-2 h-100"
                         )
-                    ], style={'textAlign':'center'})
+                    ], style={'textAlign': 'center'})
                 ]),
-            ], width=3)
+                ], width=3)
     ], className='mb-2')

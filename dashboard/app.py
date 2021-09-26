@@ -2,8 +2,6 @@ import dash
 from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 import requests
-
-
 from elements.header import header_values
 from elements.row_1 import row1_values
 from elements.row_2 import row2_values

@@ -1,7 +1,7 @@
 import json 
 
 # reading the data mapping from the file
-with open("mapping/edu_mapping.json") as f: 
+with open("mapping/edu_mapping.json") as f:
     edu_mapping = json.load(f)
     edu_keys = [val for key, val in edu_mapping.items()]
 
