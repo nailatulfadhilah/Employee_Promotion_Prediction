@@ -70,10 +70,10 @@ def get_prediction_output(gender_value, age_value, edu_value,
         "rekrutmen": recruitment_value
     }
 
-    req = requests.post(url="http://127.0.0.1:8000/predict", json=input_json)
+    req = requests.post(url="http://0.0.0.0:8000/predict", json=input_json)
     result = req.json().get("prediction")
     return result, str(gender_value), str(age_value), str(edu_value), str(reg_value), str(departemen_value), str(recruitment_value), str(masakerja_value), str(jumlahtraining_value), str(rating_value), str(penghargaan_value), str(kpi_value), str(trainingscore_value)
 
 
 if __name__ == "__main__":
-    app.server.run(host="127.0.0.1", port=8001, debug=False, threaded=False)
+    app.server.run(debug=False, threaded=False)
